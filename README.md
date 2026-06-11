@@ -11,8 +11,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/YOUR_USERNAME/TenSeiBotHost?style=for-the-badge">
-  <img src="https://img.shields.io/github/downloads/YOUR_USERNAME/TenSeiBotHost/total?style=for-the-badge">
   <img src="https://img.shields.io/badge/platform-Android-2ea44f?style=for-the-badge">
   <img src="https://img.shields.io/badge/runtime-Python-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/status-active-black?style=for-the-badge">
@@ -139,33 +137,6 @@ Recommended configuration:
 ## Releases
 
 Stable APK builds are available in the Releases section.
-
-### Naming Format
-
-```text
-TenSeiBotHost-v1.0.apk
-```
-
----
-
-## Project Structure
-
-```text
-assets/python/
-smali/com/tensei/bothost/
-res/
-AndroidManifest.xml
-```
-
----
-
-## Tech Stack
-
-- Android
-- Smali
-- Embedded Python Runtime
-- Foreground Services
-- APKTool Workflow
 
 ---
 
