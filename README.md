@@ -1,14 +1,18 @@
 # TenSeiBotHost
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/android/android.png" width="120" alt="Android"/>
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/android/android.png" width="140" alt="Android"/>
+</p>
+
+<h1 align="center">TenSeiBotHost</h1>
+
+<p align="center">
+  Android application for hosting and running Telegram bots directly on-device using an embedded Python runtime.
 </p>
 
 <p align="center">
-  Android application for hosting and running Telegram bots directly on your device using an embedded Python runtime.
-</p>
-
-<p align="center">
+  <img src="https://img.shields.io/github/stars/YOUR_USERNAME/TenSeiBotHost?style=for-the-badge">
+  <img src="https://img.shields.io/github/downloads/YOUR_USERNAME/TenSeiBotHost/total?style=for-the-badge">
   <img src="https://img.shields.io/badge/platform-Android-2ea44f?style=for-the-badge">
   <img src="https://img.shields.io/badge/runtime-Python-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/status-active-black?style=for-the-badge">
@@ -18,59 +22,82 @@
 
 ## Overview
 
-TenSeiBotHost is an Android application designed to host and execute Python-based Telegram bots directly from an Android device without requiring a separate VPS or Linux server.
+TenSeiBotHost is an Android host environment designed for executing Python-powered Telegram bots directly from an Android device without relying on external VPS infrastructure.
 
-The application includes:
-
-- Embedded Python runtime support
-- Foreground execution service
-- Runtime bootstrap system
-- Live process logging
-- Automatic restart handling
-- Persistent background execution
-
-The project focuses on portability, lightweight execution, and running Telegram bots directly on-device.
+The application provides a portable runtime environment capable of running long-lived Telegram automation processes using Android foreground services and an embedded Python runtime.
 
 ---
 
-## Features
+## Core Features
 
-- Run Telegram bots directly on Android
 - Embedded Python runtime
+- Run Telegram bots directly on Android
 - Foreground service execution
-- Automatic boot startup support
+- Persistent background runtime
 - Live runtime console logs
-- Background execution handling
-- Lightweight UI
-- Minimal resource usage
+- Automatic startup handling
+- Lightweight runtime environment
 - APK-based deployment
+- Minimal setup process
+- Runtime dependency installation support
 
 ---
 
-## How It Works
+## Runtime Workflow
 
-1. Select your `app.py`
-2. Select your `requirements.txt`
-3. Press the `START` button
-4. The application installs dependencies and launches the bot runtime automatically
+```text
+Select app.py
+        ↓
+Select requirements.txt
+        ↓
+Press START
+        ↓
+Runtime initialization
+        ↓
+Dependency installation
+        ↓
+Bot execution begins
+```
 
-Once started, the bot continues running in the background using Android foreground services.
+Once initialized, the bot continues running in the background through Android foreground services.
 
-The bot remains active until:
-- the device shuts down
-- internet connection is lost
-- the app is force stopped
-- battery restrictions terminate the process
+Runtime remains active until:
+
+- device shutdown
+- network disconnect
+- force stop
+- battery optimization termination
 
 ---
 
 ## Installation
 
-1. Download the latest APK from the Releases section
-2. Install the APK on your Android device
-3. Grant all required permissions
-4. Disable battery optimization for stable background execution
-5. Launch the app and configure your bot files
+### 1. Download APK
+
+Download the latest release from the Releases section.
+
+### 2. Install Application
+
+Install the APK normally on your Android device.
+
+### 3. Grant Permissions
+
+Allow:
+- Storage access
+- Notification permission
+- Background execution access
+
+### 4. Disable Battery Optimization
+
+Required for stable long-running background execution.
+
+### 5. Configure Runtime
+
+Select:
+- `app.py`
+- `requirements.txt`
+
+Press `START`.
 
 ---
 
@@ -80,27 +107,31 @@ The bot remains active until:
 |---|---|
 | Android Version | Android 8+ |
 | Architecture | arm64-v8a |
-| Permissions | Storage, Notifications, Internet |
 | Internet | Required |
+| Runtime | Embedded Python |
+| Storage Access | Required |
 
 ---
 
 ## Runtime Notes
 
-Some Android OEMs aggressively terminate background services.
+Some Android ROMs aggressively terminate foreground services.
 
-For proper execution:
+Recommended configuration:
 
 - Disable battery optimization
-- Allow auto-start permission
-- Lock the app in recent tasks if supported by your ROM
+- Enable auto-start permission
+- Lock the application in recents
+- Avoid aggressive RAM cleaners
 
 ---
 
 ## Screenshots
 
 <p align="center">
-  Add screenshots here
+  <img src="screenshots/home.png" width="250">
+  <img src="screenshots/runtime.png" width="250">
+  <img src="screenshots/logs.png" width="250">
 </p>
 
 ---
@@ -109,7 +140,49 @@ For proper execution:
 
 Stable APK builds are available in the Releases section.
 
-Naming format:
+### Naming Format
 
 ```text
 TenSeiBotHost-v1.0.apk
+```
+
+---
+
+## Project Structure
+
+```text
+assets/python/
+smali/com/tensei/bothost/
+res/
+AndroidManifest.xml
+```
+
+---
+
+## Tech Stack
+
+- Android
+- Smali
+- Embedded Python Runtime
+- Foreground Services
+- APKTool Workflow
+
+---
+
+## Status
+
+Project is actively maintained and tested on Android arm64 devices.
+
+---
+
+## Disclaimer
+
+This project is intended for development and educational purposes only.
+
+Users are responsible for complying with local regulations and Telegram Terms of Service.
+
+---
+
+## License
+
+MIT License
