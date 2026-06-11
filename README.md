@@ -111,18 +111,6 @@ Press `START`.
 
 ---
 
-## Runtime Notes
-
-Some Android ROMs aggressively terminate foreground services.
-
-Recommended configuration:
-
-- Disable battery optimization
-- Enable auto-start permission
-- Lock the application in recents
-- Avoid aggressive RAM cleaners
-
----
 
 ## Screenshots
 
