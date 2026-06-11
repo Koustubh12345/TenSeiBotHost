@@ -127,9 +127,9 @@ Recommended configuration:
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/home.png" width="250">
-  <img src="screenshots/runtime.png" width="250">
-  <img src="screenshots/logs.png" width="250">
+  <img src="screenshots/home.jpg" width="250">
+  <img src="screenshots/runtime.jpg" width="250">
+  <img src="screenshots/logs.jpg" width="250">
 </p>
 
 ---
